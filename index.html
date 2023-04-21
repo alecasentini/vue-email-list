@@ -15,14 +15,14 @@
 
         <button @click="attivaApi">Genera Mail</button>
 
-        <ul>
+        <ul v-if="!generating">
+
             <li v-for="(email, index) in emails" 
                 :key="index"
             >
-
-            {{ email }}
-
+                {{ email }}
             </li>
+            
         </ul>
     </div>
 
